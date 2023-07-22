@@ -1,0 +1,26 @@
+{
+  "name": "applications",
+  "homepage": "https://jjeerryyy28.github.io/ping-pong-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --watch",
+    "start": "http-server -c-1 -o ./src/index.html",
+    "build:staging": "env-cmd -f .env.staging npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "env-cmd": "^10.1.0",
+    "gh-pages": "^5.0.0"
+  }
+}
